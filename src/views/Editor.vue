@@ -38,7 +38,8 @@ export default class Editor extends Vue {
 </script>
 <style lang="css" scoped>
 #canvas{
-    height: 500px;
+    height: 100vh;
     width: 100%;
+    background: url('../assets/circuit.svg');
 }
 </style>

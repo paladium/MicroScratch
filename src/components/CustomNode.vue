@@ -21,26 +21,26 @@
 import mixin from "rete-vue-render-plugin/src/mixin";
 import Socket from "rete-vue-render-plugin/src/Socket.vue";
 export default {
-	mixins: [mixin],
-	components: {
-		Socket
-	},
-	methods: {
-		getNodeClass() {
-			// const color = this.node.data.messageNode.color;
-            // return color == null ? "default-node-color" : `node-color-${color}`;
-            return "default-node-color";
-		},
-	}
+  mixins: [mixin],
+  components: {
+    Socket
+  },
+  methods: {
+    getNodeClass() {
+      // const color = this.node.data.messageNode.color;
+      // return color == null ? "default-node-color" : `node-color-${color}`;
+      return "default-node-color";
+    }
+  }
 };
 </script>
 
 <style lang="sass" scoped>
 @import "rete-vue-render-plugin/src/vars"
 .default-node-color
-  background: $node-color
+  background: rgb(50, 50, 50)
 .node
-  border: 2px solid #4e58bf
+  border: 2px solid orangered
   border-radius: 10px
   cursor: pointer
   min-width: $node-width
@@ -49,8 +49,9 @@ export default {
   box-sizing: content-box
   position: relative
   user-select: none
+  box-shadow: 0 0 10px pink, 0 0 20px orangered, 0 0 40px red, 0 0 80px magenta
   &:hover
-    background: lighten($node-color,4%)
+    background: lighten(rgb(50, 50, 50),4%)
   &.selected
     background: $node-color-selected
     border-color: #e3c000

@@ -5,32 +5,27 @@
     </md-app-toolbar>
 
     <md-app-drawer md-permanent="full">
-      <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
+      <md-toolbar class="md-transparent" md-elevation="0"></md-toolbar>
 
       <md-list>
         <md-list-item>
-          <md-icon>move_to_inbox</md-icon>
-          <span class="md-list-item-text">Inbox</span>
-        </md-list-item>
-
-        <md-list-item>
           <md-icon>send</md-icon>
-          <span class="md-list-item-text">Sent Mail</span>
+          <span class="md-list-item-text">Run</span>
         </md-list-item>
 
-        <md-list-item>
-          <md-icon>delete</md-icon>
-          <span class="md-list-item-text">Trash</span>
+        <md-list-item @click="showAddDialog">
+          <md-icon>add</md-icon>
+          <span class="md-list-item-text">Add block</span>
         </md-list-item>
 
         <md-list-item>
           <md-icon>error</md-icon>
-          <span class="md-list-item-text">Spam</span>
+          <span class="md-list-item-text">Help</span>
         </md-list-item>
       </md-list>
     </md-app-drawer>
 
-    <md-app-content>
+    <md-app-content style="padding: 0;">
       <router-view></router-view>
     </md-app-content>
   </md-app>
@@ -39,14 +34,18 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component
-export default class App extends Vue {}
+export default class App extends Vue {
+  showAddDialog() {
+    console.log("add dialog");
+  }
+}
 </script>
 <style lang="scss">
 .md-app {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 .md-drawer {
-	width: 200px;
+  width: 150px !important;
 }
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 
