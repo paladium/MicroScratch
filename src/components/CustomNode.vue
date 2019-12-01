@@ -53,7 +53,7 @@ export default {
   &:hover
     background: lighten(rgb(50, 50, 50),4%)
   &.selected
-    background: $node-color-selected
+    background: #FFA000
     border-color: #e3c000
   .title
     color: white
