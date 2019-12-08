@@ -6,10 +6,12 @@ import router from './router'
 import store from './store'
 import 'vue-material/dist/vue-material.min.css'
 import VueMaterial from 'vue-material'
+import Chat from 'vue-beautiful-chat'
 
 Vue.config.productionTip = false;
 
 Vue.use(VueMaterial);
+Vue.use(Chat);
 
 new Vue({
   router,

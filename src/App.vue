@@ -42,7 +42,7 @@ export default class App extends Vue {
 </script>
 <style lang="scss">
 .md-app {
-    min-height: 100vh;
+    max-height: 100vh;
 }
 .md-drawer {
     width: 150px !important;
