@@ -133,10 +133,7 @@ export default class Editor extends Vue {
         this.editor.register(new InputComponent());
         this.editor.register(new NumberRobotComponent());
         this.editor.register(new PrinterComponent());
-        this.webSocket = new WebSocket("ws://localhost:8000/bot");
-        // this.webSocket.onopen = (e) => {
-        //     this.webSocket.send("cool");
-        // };
+        this.webSocket = new WebSocket(process.env.VUE_APP_WEBSOCKET);
         this.webSocket.onmessage = e => {
             //author - bot
             //type - text
